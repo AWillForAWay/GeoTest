@@ -1,0 +1,17 @@
+﻿@model IEnumerable<GeocacheApp2.Models.Geocache>
+
+<table id="tblCaches" class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr id="@item.ID">
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+        </tr>
+    }
+</table>

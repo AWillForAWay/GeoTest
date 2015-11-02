@@ -1,0 +1,35 @@
+﻿@model GeocacheApp2.Models.Geocache
+@Scripts.Render("~/bundles/cachemaps")
+
+@if (Model != null)
+{
+<div>
+    <span style="display:none" id="lblLat">@Model.Latitude</span>
+    <span style="display:none" id="lblLong">@Model.Longitude</span>
+    <h4>@Html.DisplayFor(model => Model.Name)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Latitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Longitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Longitude)
+        </dd>
+
+    </dl>
+    <div id="map" class="wide-map short-map"></div>
+</div>
+}
+else
+{
+    <h4>No Geocache Found</h4>
+}

@@ -1,0 +1,16 @@
+﻿@model IEnumerable<GeocacheApp2.Models.Geocache>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>All Geocaches</h2>
+<div class="row">
+    <div class="col-md-4">
+        @Html.Action("GeocacheList", "Geocache")
+    </div>
+    <div class="col-md-6">
+        <div id="divGeocache"></div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
